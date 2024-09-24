@@ -105,7 +105,6 @@ const donateForFeni = document.getElementById("donate-for-feni")
    document.getElementById("main-account").innerText=newMainAccountBalanceForFeni;
 
    // using modal
-
    const result = document.getElementById("donateModal");
    result.classList.remove("hidden");
 
@@ -117,6 +116,53 @@ const donateForFeni = document.getElementById("donate-for-feni")
    });
 
 
-
-   
      })
+
+
+
+
+     //   third donation card    
+
+const aidForInjurPeople = document.getElementById("help-injur-people")
+.addEventListener('click',function(){
+   
+// input amount     
+const amountOfAid = parseFloat(document.getElementById("quota-protest").value);
+if (isNaN(amountOfAid) || amountOfAid <= 0) {
+alert("Please enter a valid donation amount.");
+return; 
+}
+
+// donate amount    
+const totleAidAmount = parseFloat(document.getElementById("this-amount-for-help").innerText);
+
+// main account
+const mainAccount = document.getElementById("main-account").innerText;
+const mainAccountBalance = parseFloat(mainAccount);
+
+if (mainAccountBalance < amountOfAid) {
+   alert("Insufficient balance in main account!");
+   return;
+  }
+
+//   new aid amount 
+const newAidAmount = amountOfAid+totleAidAmount ;
+document.getElementById("this-amount-for-help").innerText=newAidAmount;
+
+// new main account balance
+const remainingMainBalance =mainAccountBalance-amountOfAid;
+document.getElementById("main-account").innerText= remainingMainBalance;
+
+// using modal
+const result = document.getElementById("donateModal");
+result.classList.remove("hidden");
+
+const closeModalBtn = document.getElementById("closeModalBtn");
+const modal = document.getElementById("donateModal");
+
+closeModalBtn.addEventListener("click",function(){
+  modal.classList.add("hidden");
+});
+
+
+})
