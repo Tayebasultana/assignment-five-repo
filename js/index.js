@@ -4,19 +4,11 @@
 const mainAccount = document.getElementById("main-account").innerText;
 const mainAccountBalance = parseFloat(mainAccount);
 
-// using modal
-
-const result = document.getElementById("donateModal");
-result.classList.remove("hidden");
-
-const closeModalBtn = document.getElementById("closeModalBtn");
-const modal = document.getElementById("donateModal");
-
-closeModalBtn.addEventListener("click",function(){
-    modal.classList.add("hidden");
-});
 
 
+// donate amount its use there for hystory card- its for noakhali flood
+const firstCardAmount = document.getElementById("total-donate-amount-first").innerText;
+const totalAmountOfFirstCard = parseFloat(firstCardAmount);
 
 
 
@@ -67,6 +59,19 @@ donateForFlood.addEventListener('click',function(){
     });
 
 
+    // history item
+
+    const historyItem = document.createElement("div");
+    historyItem.className = "bg-white p-4 rounded-lg shadow-md mb-4 border-slate-600";
+
+    historyItem.innerHTML = `
+    <h2 class="text-lg text-black font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+    <p>${new Date().toLocaleDateString}</p>
+`;
+
+  const historyList = document.getElementById("history-list");
+  historyList. insertBefore(historyItem, historyList.firstChild);
+
 })
 
 
@@ -114,6 +119,19 @@ const donateForFeni = document.getElementById("donate-for-feni")
    closeModalBtn.addEventListener("click",function(){
        modal.classList.add("hidden");
    });
+
+   // history item
+
+   const secondhistoryItem = document.createElement("div");
+   secondhistoryItem.className = "bg-white p-4 rounded-lg shadow-md mb-4 border-slate-600";
+
+   secondhistoryItem.innerHTML = `
+   <h2 class="text-lg text-black font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+   <p>${new Date().toLocaleDateString}</p>
+`;
+
+  const secondHistryList = document.getElementById("second-histry-list");
+  secondHistryList. insertBefore(secondhistoryItem, secondHistryList.firstChild);
 
 
      })
@@ -165,4 +183,67 @@ closeModalBtn.addEventListener("click",function(){
 });
 
 
+// history item
+
+const thirdhistoryItem = document.createElement("div");
+thirdhistoryItem .className = "bg-white p-4 rounded-lg shadow-md mb-4 border-slate-600";
+
+thirdhistoryItem .innerHTML = `
+<h2 class="text-lg text-black font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+<p>${new Date().toLocaleDateString}</p>
+`;
+
+const thirdHistryList = document.getElementById("third-histry-list");
+thirdHistryList. insertBefore(thirdhistoryItem , thirdHistryList.firstChild);
+
+
+
+
 })
+
+
+
+      // button functionality
+
+ 
+      const historyTab = document.getElementById("History-tab");
+      historyTab.addEventListener("click", function() {
+  
+    // When clicked donation button
+    const donationTab = document.getElementById("donation-tab");
+    donationTab.addEventListener("click", function() {
+        donationTab.classList.add("bg-lime-500", "text-black");
+        donationTab.classList.remove("bg-transparent", "text-slate-600", "border-slate-600");
+    
+        historyTab.classList.add("bg-transparent", "text-slate-600", "border-slate-600");
+        historyTab.classList.remove("bg-lime-500", "text-black", "border-none");
+        
+        // Show donate page when donation button is clicked
+        document.getElementById("donate-page").classList.remove("hidden");
+        document.getElementById("history-card").classList.add("hidden");
+    });
+  
+    // When clicked history button
+    historyTab.addEventListener("click", function() {
+        historyTab.classList.add("bg-lime-500", "text-black", "border-none");
+        historyTab.classList.remove("bg-transparent", "text-slate-600", "border-slate-600");
+    
+        donationTab.classList.add("bg-transparent", "text-slate-600", "border-slate-600");
+        donationTab.classList.remove("bg-lime-500", "text-black", "border-none");
+        
+        // Hide donate page when history button is clicked
+        document.getElementById("donate-page").classList.add("hidden");
+        document.getElementById("history-card").classList.remove("hidden");
+    });
+
+    
+});
+
+
+
+
+      
+      
+      
+      
+      

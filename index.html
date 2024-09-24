@@ -31,10 +31,12 @@
     <main>
       <section class="bg-white px-5 lg:px-20 py-10 text-center">
          <div>
-          <button class="btn border-none text-black bg-lime-500 font-bold hover:bg-lime-600 py-2 px-7">Donation</button>
-          <button class="btn border-slate-600 bg-transparent text-slate-600 font-bold  py-2 px-7">History</button>
+          <button id="donation-tab" class="btn border-none text-black bg-lime-500 font-bold hover:bg-lime-600 py-2 px-7">Donation</button>
+          <button id="History-tab" class="btn border-slate-600 bg-transparent text-slate-600 font-bold  py-2 px-7">History</button>
          </div>
-        <!-- first donate card -->
+         <!-- donate-page -->
+         <div id="donate-page">
+                 <!-- first donate card -->
          <div class="bg-transparent border-2 rounded-2xl border-slate-600 p-5 lg:p-10 mt-8 lg:flex">
           <div><img src="assets/noakhali.png" alt=""></div>
             
@@ -100,8 +102,34 @@
              </div>
          </div>
         <!-- 3rd end -->
+         </div>
+
+
+         <!-- history-page -->
+         <div id="history-card" class="hidden">
+          <!-- history card for 1st-->
+        <div class=" border-2 rounded-2xl border-slate-600 p-5 lg:p-10 mt-7">
+          <h3 class="text-lg text-black font-bold">Donate histry for Flood at Noakhali, Bangladesh</h3>
+           <div id="history-list"></div>
+       </div>
+        
+      <!-- history card for 2nd-->
+      <div class=" border-2 rounded-2xl border-slate-600 p-5 lg:p-10 mt-7">
+       <h3 class="text-lg text-black font-bold ">Donate histry for Flood Relief in Feni,Bangladesh</h3>
+        <div id="second-histry-list"></div>
+    </div>
+
+    <!-- history card for 3rd-->
+    <div class=" border-2 rounded-2xl border-slate-600 p-5 lg:p-10 mt-7">
+     <h3 class="text-lg text-black font-bold ">Aid for Injured in the Quota Movement</h3>
+      <div id="third-histry-list"></div>
+  </div>
+         </div>
+         
       </section>
 
+       
+      
 
 
       <!-- modal card -->
