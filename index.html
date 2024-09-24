@@ -22,7 +22,7 @@
         </div>
         <div class="order-2 mt-4 lg:mt-0 lg:order-3 flex items-center">
             <div><img src="assets/coin.png" alt=""></div>
-            <div class="ml-4"><h3 class="text-lg">5500 BDT</h3></div>
+            <div class="ml-4"><h3 class="text-lg"><span id="main-account">5500</span> BDT</h3></div>
         </div>
     </nav>
     </header>
@@ -41,7 +41,7 @@
              <div class="lg:w-6/12 lg:ml-20 mt-6">
               <!-- how much i donate start here--> 
               <div>
-                <button class="text-lg text-slate-600 mb-5 bg-slate-300 px-6 py-4 rounded-xl">0 BDT</button>
+                <button class="text-lg text-slate-600 mb-5 bg-slate-300 px-6 py-4 rounded-xl"><span id="total-donate-amount-first">0</span> BDT</button>
               </div>
               
               <div>
@@ -50,8 +50,8 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full  bg-transparent text-slate-700 border-slate-600 mt-6" />
-                <button class="btn btn-block text-black text-xl font-bold bg-lime-500 border-none mt-4">Donate Now</button>
+                <input type="text" placeholder="Write Donation Amount" id="first-donate-amount" class="input input-bordered w-full  bg-transparent text-slate-700 border-slate-600 mt-6" />
+                <button id="donate-for-flood" class="btn btn-block text-black text-xl font-bold bg-lime-500 border-none mt-4">Donate Now</button>
               </div>
              </div>
          </div>
@@ -63,7 +63,7 @@
              <div class="lg:w-6/12 lg:ml-20 mt-6">
               <!-- how much i donate start here--> 
               <div>
-                <button class="text-lg text-slate-600 mb-5 bg-slate-300 px-6 py-4 rounded-xl">700 BDT</button>
+                <button class="text-lg text-slate-600 mb-5 bg-slate-300 px-6 py-4 rounded-xl"><span id="total-donate-amount-in-feni">700</span> BDT</button>
               </div>
               
               <div>
@@ -72,8 +72,8 @@
               </div>
 
               <div>
-                <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full  bg-transparent text-slate-700 border-slate-600 mt-6" />
-                <button class="btn btn-block text-black text-xl font-bold bg-lime-500 border-none mt-4">Donate Now</button>
+                <input type="text" placeholder="Write Donation Amount" id="donate-amount-for-feni" class="input input-bordered w-full  bg-transparent text-slate-700 border-slate-600 mt-6" />
+                <button id="donate-for-feni" class="btn btn-block text-black text-xl font-bold bg-lime-500 border-none mt-4">Donate Now</button>
               </div>
              </div>
          </div>
@@ -101,12 +101,28 @@
          </div>
         <!-- 3rd end -->
       </section>
+
+
+
+      <!-- modal card -->
+      <div id="donateModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white w-auto p-6 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-bold  text-black mb-4">Congrates!</h2>
+            <img src="assets/coin.png" alt="" class="mx-auto">
+            <p class="mb-4 text-slate-600">Your donation has been processed successfully!</p>
+            <p class="font-bold text-black text-sm">successfully</p>
+            <button id="closeModalBtn" class="bg-slate-400 text-white py-2 px-4 rounded mt-4">Close Confirmation</button>
+        </div>
+    </div>
+
     </main>
 
 
     <footer>
        <section class="h-24 bg-teal-700"></section>
     </footer>
+
+   <script src="./js/index.js"></script>
 
 </body>
 </html>
