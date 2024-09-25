@@ -12,6 +12,19 @@ const totalAmountOfFirstCard = parseFloat(firstCardAmount);
 
 
 
+// make the button div blur when i scrool and it make static
+const blurDiv = document.getElementById('blur-Div');
+window.addEventListener('scroll', function() {
+  if (window.scrollY > 50) { 
+      blurDiv.classList.add('backdrop-blur'); 
+  } else {
+      blurDiv.classList.remove('backdrop-blur'); 
+  }
+});
+
+
+
+
 
             //  first donation card
 

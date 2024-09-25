@@ -7,33 +7,35 @@
     <!-- daisyUi -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <html data-theme="light">
 </head>
 <body>
 
-    <header>
-      <nav class="flex flex-col sm:flex-row justify-between py-7 sm:px-4 lg:px-20 bg-teal-700 items-center">
+    <header class="sticky top-0 z-10">
+      <nav class="flex flex-col sm:flex-row justify-between py-8 sm:px-4 lg:px-20 bg-teal-700 items-center ">
         <div class="order-3 mt-4 lg:mt-0 lg:order-1 ">
-            <button class="btn border-none bg-lime-500 text-black font-bold hover:bg-lime-600 py-2 px-7">Blog</button>
+            <a href="blog.html" class="btn border-none bg-lime-500 text-black font-bold hover:bg-lime-600 py-2 px-7">Blog</a>
         </div>
         <div class="order-1 lg:order-2 flex">
             <div><img src="assets/logo.png" alt=""></div>
-            <div class="ml-4 mt-3"><h3 class="font-bold text-xl">Donate Bangladesh</h3></div>
+            <div class="ml-4 mt-3"><h3 class="font-bold text-xl text-black">Donate Bangladesh</h3></div>
         </div>
         <div class="order-2 mt-4 lg:mt-0 lg:order-3 flex items-center">
             <div><img src="assets/coin.png" alt=""></div>
-            <div class="ml-4"><h3 class="text-lg"><span id="main-account">5500</span> BDT</h3></div>
+            <div class="ml-4"><h3 class="text-lg text-black"><span id="main-account">5500</span> BDT</h3></div>
         </div>
     </nav>
     </header>
 
 
     <main>
-      <section class="bg-white px-5 lg:px-20 py-10 text-center">
-         <div>
-          <button id="donation-tab" class="btn border-none text-black bg-lime-500 font-bold hover:bg-lime-600 py-2 px-7">Donation</button>
-          <button id="History-tab" class="btn border-slate-600 bg-transparent text-slate-600 font-bold  py-2 px-7">History</button>
-         </div>
+      <!-- buttons -->
+      <div id="blur-Div" class="bg-white bg-opacity-30 px-5 lg:px-20 py-7 text-center sticky top-28 z-10 ">
+        <button id="donation-tab" class="btn border-none text-black bg-lime-500 font-bold hover:bg-lime-600 py-2 px-7">Donation</button>
+        <button id="History-tab" class="btn border-slate-600 bg-transparent text-slate-600 font-bold  py-2 px-7">History</button>
+       </div>
+
+      <section class="bg-white px-5 lg:px-20 pt-1 pb-10 text-center">
          <!-- donate-page -->
          <div id="donate-page">
                  <!-- first donate card -->
@@ -127,9 +129,7 @@
          </div>
          
       </section>
-
-       
-      
+    
 
 
       <!-- modal card -->
