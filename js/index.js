@@ -12,17 +12,6 @@ const totalAmountOfFirstCard = parseFloat(firstCardAmount);
 
 
 
-// make the button div blur when i scrool and it make static
-const blurDiv = document.getElementById('blur-Div');
-window.addEventListener('scroll', function() {
-  if (window.scrollY > 50) { 
-      blurDiv.classList.add('backdrop-blur'); 
-  } else {
-      blurDiv.classList.remove('backdrop-blur'); 
-  }
-});
-
-
 
 
 
@@ -79,7 +68,7 @@ donateForFlood.addEventListener('click',function(){
 
     historyItem.innerHTML = `
     <h2 class="text-lg text-black font-bold">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-    <p>${new Date().toLocaleDateString}</p>
+    <p>${new Date().toLocaleDateString()}</p> 
 `;
 
   const historyList = document.getElementById("history-list");
